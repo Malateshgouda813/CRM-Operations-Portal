@@ -4,7 +4,6 @@ import { Prisma } from '@prisma/client';
 import { MovementType, AuthenticatedRequest } from '../types';
 import { createProductSchema, updateProductSchema } from '../validators/product.validator';
 import { sendSuccess, sendError } from '../utils/response';
-import { AuthenticatedRequest } from '../types';
 
 export async function getProducts(req: AuthenticatedRequest, res: Response, next: NextFunction) {
   try {

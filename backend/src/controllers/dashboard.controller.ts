@@ -2,7 +2,6 @@ import { Response, NextFunction } from 'express';
 import { prisma } from '../config/prisma';
 import { ChallanStatus, AuthenticatedRequest } from '../types';
 import { sendSuccess } from '../utils/response';
-import { AuthenticatedRequest } from '../types';
 
 export async function getDashboardStats(req: AuthenticatedRequest, res: Response, next: NextFunction) {
   try {
