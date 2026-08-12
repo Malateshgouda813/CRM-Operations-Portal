@@ -5,7 +5,6 @@ import { ChallanStatus, MovementType, AuthenticatedRequest } from '../types';
 import { createChallanSchema, updateChallanSchema } from '../validators/challan.validator';
 import { generateChallanNumber } from '../utils/challanNumber';
 import { sendSuccess, sendError } from '../utils/response';
-import { AuthenticatedRequest } from '../types';
 
 export async function getChallans(req: AuthenticatedRequest, res: Response, next: NextFunction) {
   try {

@@ -5,7 +5,7 @@ import { prisma } from '../config/prisma';
 import { ENV } from '../config/env';
 import { loginSchema } from '../validators/auth.validator';
 import { sendSuccess, sendError } from '../utils/response';
-import { AuthenticatedRequest, JwtPayload } from '../types';
+import { AuthenticatedRequest, JwtPayload, Role } from '../types';
 
 export async function login(req: Request, res: Response, next: NextFunction) {
   try {
@@ -27,7 +27,7 @@ export async function login(req: Request, res: Response, next: NextFunction) {
     const payload: JwtPayload = {
       userId: user.id,
       email: user.email,
-      role: user.role,
+      role: user.role as Role,
       name: user.name,
     };
 
@@ -41,7 +41,7 @@ export async function login(req: Request, res: Response, next: NextFunction) {
           id: user.id,
           name: user.name,
           email: user.email,
-          role: user.role,
+          role: user.role as Role,
         },
       },
       'Login successful'

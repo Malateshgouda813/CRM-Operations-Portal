@@ -8,7 +8,6 @@ import {
   createFollowUpSchema,
 } from '../validators/customer.validator';
 import { sendSuccess, sendError } from '../utils/response';
-import { AuthenticatedRequest } from '../types';
 
 export async function getCustomers(req: AuthenticatedRequest, res: Response, next: NextFunction) {
   try {
