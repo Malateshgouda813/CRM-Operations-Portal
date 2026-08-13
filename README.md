@@ -4,6 +4,8 @@
 
 ---
 
+## LIVE link :  https://minierpcrm-frontend.onrender.com
+
 ## 1. Project Overview
 
 The **Mini ERP + CRM Operations Portal** is a production-ready full-stack application built for wholesale/distribution companies. It provides unified operational control across internal teams—Sales, Warehouse, Accounts, and System Administrators.
